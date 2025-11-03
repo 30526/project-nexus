@@ -20,7 +20,7 @@ const Register = () => {
         toast.success("Account Created Successfully!");
         navigate("/");
       })
-      .catch((error) => console.log(error.message));
+      .catch((error) => toast.error(error.message));
   };
 
   return (

@@ -1,7 +1,27 @@
-import React from "react";
+import React, { use } from "react";
 import loginPage from "../../assets/5187967.jpg";
 import { Link } from "react-router";
+import AuthContext from "../../provider/AuthContext";
+import toast from "react-hot-toast";
+
 const Login = () => {
+  const { signInUser } = use(AuthContext);
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+
+    signInUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        toast.success("Logged in Successfully!");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+      });
+  };
+
   return (
     <div className="min-h-screen grid grid-cols-3">
       <div className="min-h-screen flex flex-col justify-center col-span-2 pr-45 py-15 ">
@@ -16,7 +36,7 @@ const Login = () => {
       <div className=" flex justify-center items-center bg-linear-to-br from-[#1770ff] to-[#07c2f1fa]">
         <div className=" card bg-base-100/80 bg-blur w-full max-w-sm shrink-0">
           <div className="card-body ">
-            <form>
+            <form onSubmit={handleLogin}>
               <fieldset className="fieldset">
                 <h3 className="text-3xl font-bold mb-8 text-center">
                   Login Now
@@ -40,7 +60,12 @@ const Login = () => {
                       <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
                     </g>
                   </svg>
-                  <input type="email" placeholder="mail@site.com" required />
+                  <input
+                    name="email"
+                    type="email"
+                    placeholder="mail@site.com"
+                    required
+                  />
                 </label>
                 <div className="validator-hint hidden">
                   Enter valid email address
@@ -71,6 +96,7 @@ const Login = () => {
                     </g>
                   </svg>
                   <input
+                    name="password"
                     type="password"
                     required
                     placeholder="Password"
@@ -86,7 +112,10 @@ const Login = () => {
                   At least one lowercase letter <br />
                   At least one uppercase letter
                 </p>
-                <button className="btn btn-neutral mt-4 mb-1 shadow-none">
+                <button
+                  type="submit"
+                  className="btn btn-neutral mt-4 mb-1 shadow-none"
+                >
                   Login
                 </button>
                 {/* Google */}
