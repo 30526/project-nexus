@@ -1,12 +1,14 @@
 import React, { use } from "react";
 import loginPage from "../../assets/5187967.jpg";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import AuthContext from "../../provider/AuthContext";
 import toast from "react-hot-toast";
 import GoogleBtn from "../../components/GoogleBtn/GoogleBtn";
 
 const Login = () => {
-  const { signInUser, setUser } = use(AuthContext);
+  const { signInUser } = use(AuthContext);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -18,6 +20,7 @@ const Login = () => {
         const user = result.user;
 
         toast.success("Logged in Successfully!");
+        navigate(location.state);
       })
       .catch((error) => {
         toast.error(error.message);

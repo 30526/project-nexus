@@ -4,6 +4,7 @@ import Layout from "../LayOut/Layout";
 import MyProfile from "../pages/MyProfile/MyProfile";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import PrivateRoute from "../Private/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -16,7 +17,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/myProfile",
-        element: <MyProfile></MyProfile>,
+        element: (
+          <PrivateRoute>
+            <MyProfile></MyProfile>,
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
