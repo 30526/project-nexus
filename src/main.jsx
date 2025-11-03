@@ -5,6 +5,7 @@ import { RouterProvider } from "react-router";
 import { router } from "./routes/router";
 import AuthProvider from "./provider/AuthProvider";
 import { Toaster } from "react-hot-toast";
+import "animate.css";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

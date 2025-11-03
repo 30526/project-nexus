@@ -32,10 +32,14 @@ const Register = () => {
   return (
     <div className="min-h-screen grid grid-cols-3">
       <div className="min-h-screen flex items-center col-span-2 pr-45 py-15 ">
-        <img className="h-80" src={regPic} alt="Login page image" />
-        <h2 className="text-5xl font-bold mb-4">
+        <img
+          className="h-80 animate-pulse mr-2"
+          src={regPic}
+          alt="Login page image"
+        />
+        <h2 className="text-5xl font-bold mb-4 animate__animated animate__pulse  ">
           Ready to Teach or Learn? <br />
-          <span className="bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] bg-clip-text text-transparent">
+          <span className=" bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] bg-clip-text text-transparent">
             Register Now!
           </span>
         </h2>

@@ -30,13 +30,13 @@ const Login = () => {
   return (
     <div className="min-h-screen grid grid-cols-3">
       <div className="min-h-screen flex flex-col justify-center col-span-2 pr-45 py-15 ">
-        <h2 className="text-5xl font-bold mb-4">
+        <h2 className="text-5xl font-bold mb-4 animate__animated animate__backInLeft">
           Unlock Your Local Potential: <br />
-          <span className="bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] bg-clip-text text-transparent">
+          <span className=" bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] bg-clip-text text-transparent">
             Connect, Learn, Grow.
           </span>
         </h2>
-        <img src={loginPage} alt="Login page image" />
+        <img className="animate__animated animate__backInUp" src={loginPage} alt="Login page image" />
       </div>
       <div className=" flex justify-center items-center bg-linear-to-br from-[#1770ff] to-[#07c2f1fa]">
         <div className=" card bg-base-100/80 bg-blur w-full max-w-sm shrink-0">
