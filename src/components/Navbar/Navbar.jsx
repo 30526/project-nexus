@@ -1,13 +1,11 @@
-import React, { use } from "react";
+import React from "react";
 import Container from "../Container/Container";
 import MyLinks from "../MyLinks/MyLinks";
 import logo from "../../assets/logo.png";
 import { Link, NavLink } from "react-router";
-import AuthContext from "../../provider/AuthContext";
+import LoginBtnToggle from "../LoginBtnToggle/LoginBtnToggle";
 
 const Navbar = () => {
-  const getContext = use(AuthContext);
-
   return (
     <nav className="navbar bg-base-100 shadow-sm">
       <Container>
@@ -73,12 +71,7 @@ const Navbar = () => {
                 />
               </div>
             </div>
-            <Link
-              to={"/login"}
-              className="btn bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] text-white px-8 border-none"
-            >
-              Login
-            </Link>
+            <LoginBtnToggle></LoginBtnToggle>
           </div>
         </div>
       </Container>
