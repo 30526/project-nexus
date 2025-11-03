@@ -7,10 +7,15 @@ const useCourseData = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     axios("../courseData.json")
       .then((data) => setCourseData(data.data))
       .catch((error) => setError(error))
-      .finally(() => setLoading(false));
+      .finally(() => {
+        setTimeout(() => {
+          setLoading(false);
+        }, 1000);
+      });
   }, []);
 
   return [courseData, error, loading];

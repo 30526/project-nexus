@@ -7,6 +7,7 @@ import slider1 from "../../assets/pexels.jpg";
 import slider2 from "../../assets/pexels2.jpg";
 import slider3 from "../../assets/pexels3.jpg";
 import ImageGradient from "../imageGradient/ImageGradient";
+import { Link } from "react-router";
 
 export default function Slider() {
   return (
@@ -29,9 +30,11 @@ export default function Slider() {
                 <p className="text-lg hidden  md:block">
                   Join our global community of students and teachers today.
                 </p>
-                <button className="mt-5 btn bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] text-white  border-none shadow-none rounded-lg">
-                  Visit Courses
-                </button>
+                <Link to={"/allCourses"}>
+                  <button className="mt-5 btn bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] text-white  border-none shadow-none rounded-lg">
+                    Visit Courses
+                  </button>
+                </Link>
               </div>
             </ImageGradient>
           </div>

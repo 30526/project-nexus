@@ -3,6 +3,7 @@ import useCourseData from "../../Hooks/useCourseData";
 import Container from "../Container/Container";
 import CourseCard from "../CourseCard/CourseCard";
 import person from "../../assets/Coursera.jpeg";
+import { Link } from "react-router";
 
 const PopularCourses = () => {
   const [courseData] = useCourseData();
@@ -26,9 +27,11 @@ const PopularCourses = () => {
             Explore trending courses and boost your skills with top-rated
             instructors.
           </p>
-          <button className="btn bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] text-white px-8 border-none">
-            See All Courses
-          </button>
+          <Link to={"/allCourses"}>
+            <button className="btn bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] text-white px-8 border-none">
+              See All Courses
+            </button>
+          </Link>
         </div>
         <div className="md:col-span-8">
           <div className=" grid grid-cols-1 md:grid-cols-3 justify-items-center gap-4 ">
