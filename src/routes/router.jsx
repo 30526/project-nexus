@@ -6,6 +6,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivateRoute from "../Private/PrivateRoute";
 import AllCourses from "../pages/AllCourses/AllCourses";
+import AllTopRatedCourses from "../pages/AllTopRatedCourses/AllTopRatedCourses";
 
 export const router = createBrowserRouter([
   {
@@ -33,8 +34,12 @@ export const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "allCourses",
+        path: "/allCourses",
         element: <AllCourses></AllCourses>,
+      },
+      {
+        path: "/topRatedCourses",
+        element: <AllTopRatedCourses></AllTopRatedCourses>,
       },
     ],
   },

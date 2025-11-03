@@ -17,7 +17,7 @@ const AllCourses = () => {
           All Available Courses
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-4 justify-items-center gap-4 mb-10">
         {courseData.map((data) => (
           <CourseCard key={data.skillId} data={data}></CourseCard>
         ))}
