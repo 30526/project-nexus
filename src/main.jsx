@@ -6,6 +6,9 @@ import { router } from "./routes/router";
 import AuthProvider from "./provider/AuthProvider";
 import { Toaster } from "react-hot-toast";
 import "animate.css";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

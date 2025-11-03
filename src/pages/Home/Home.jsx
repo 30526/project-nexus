@@ -1,9 +1,12 @@
 import React from "react";
+import Slider from "../../components/Slider/Slider";
+import Card from "../../components/card/Card";
 
 const Home = () => {
   return (
-    <div className="min-h-screen flex justify-center items-center">
-      <h2 className="animate__animated animate__bounce">This is Home</h2>
+    <div className="">
+      <Slider></Slider>
+      <Card></Card>
     </div>
   );
 };

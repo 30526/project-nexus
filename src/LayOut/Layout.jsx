@@ -11,13 +11,13 @@ const Layout = () => {
       <header>
         <Navbar></Navbar>
       </header>
-      <Container>
-        <main>
-          <section>
-            <Outlet></Outlet>
-          </section>
-        </main>
-      </Container>
+
+      <main>
+        <section>
+          <Outlet></Outlet>
+        </section>
+      </main>
+
       <footer>
         <Footer></Footer>
       </footer>
