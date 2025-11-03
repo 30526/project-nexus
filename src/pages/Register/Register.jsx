@@ -5,18 +5,23 @@ import AuthContext from "../../provider/AuthContext";
 import toast from "react-hot-toast";
 
 const Register = () => {
-  const { createUser, setUser } = use(AuthContext);
+  const { createUser, updateUser, setUser } = use(AuthContext);
   const navigate = useNavigate();
 
   const handleRegister = (event) => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
+    const name = event.target.name.value;
+    const photo = event.target.url.value;
 
     createUser(email, password)
       .then((result) => {
         const user = result.user;
         event.target.reset();
+        updateUser({ displayName: name, photoURL: photo })
+          .then(() => {})
+          .catch(() => toast.error("Error Occured"));
         toast.success("Account Created Successfully!");
         navigate("/");
       })
@@ -62,6 +67,7 @@ const Register = () => {
                     </g>
                   </svg>
                   <input
+                    name="name"
                     type="text"
                     required
                     placeholder="Username"
@@ -97,6 +103,7 @@ const Register = () => {
                     </g>
                   </svg>
                   <input
+                    name="url"
                     type="url"
                     required
                     placeholder="https://"
