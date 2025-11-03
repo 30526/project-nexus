@@ -50,9 +50,11 @@ export default function Slider() {
               <p className="text-lg hidden  md:block">
                 Join our global community of students and teachers today.
               </p>
-              <button className="mt-5 btn bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] text-white  border-none shadow-none rounded-lg">
-                Visit Courses
-              </button>
+              <Link to={"/allCourses"}>
+                <button className="mt-5 btn bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] text-white  border-none shadow-none rounded-lg">
+                  Visit Courses
+                </button>
+              </Link>
             </div>
           </ImageGradient>
         </SwiperSlide>
@@ -67,9 +69,11 @@ export default function Slider() {
               <p className="text-lg hidden  md:block">
                 Join our global community of students and teachers today.
               </p>
-              <button className="mt-5 btn bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] text-white  border-none shadow-none rounded-lg">
-                Visit Courses
-              </button>
+              <Link to={"/allCourses"}>
+                <button className="mt-5 btn bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] text-white  border-none shadow-none rounded-lg">
+                  Visit Courses
+                </button>
+              </Link>
             </div>
           </ImageGradient>
         </SwiperSlide>
