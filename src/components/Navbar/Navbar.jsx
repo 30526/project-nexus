@@ -48,7 +48,7 @@ const Navbar = () => {
             <div className="flex items-center gap-2">
               <img className="w-8" src={logo} alt="" />
               <NavLink to={"/"}>
-                <span className="text-2xl font-bold ">Nexus</span>
+                <span className="text-2xl font-bold hidden md:block">Nexus</span>
               </NavLink>
             </div>
           </div>
