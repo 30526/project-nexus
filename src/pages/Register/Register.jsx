@@ -5,7 +5,7 @@ import AuthContext from "../../provider/AuthContext";
 import toast from "react-hot-toast";
 
 const Register = () => {
-  const { createUser } = use(AuthContext);
+  const { createUser, setUser } = use(AuthContext);
   const navigate = useNavigate();
 
   const handleRegister = (event) => {

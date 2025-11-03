@@ -5,7 +5,7 @@ import AuthContext from "../../provider/AuthContext";
 import toast from "react-hot-toast";
 
 const Login = () => {
-  const { signInUser } = use(AuthContext);
+  const { signInUser, setUser } = use(AuthContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -15,6 +15,7 @@ const Login = () => {
     signInUser(email, password)
       .then((result) => {
         const user = result.user;
+        
         toast.success("Logged in Successfully!");
       })
       .catch((error) => {
