@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { FaEnvelope, FaUser, FaCalendarAlt, FaBook } from "react-icons/fa";
 import "animate.css";
 
@@ -7,6 +7,7 @@ import AuthContext from "../../provider/AuthContext";
 
 const Profile = () => {
   const { user } = use(AuthContext);
+  
 
   if (!user) {
     return (
