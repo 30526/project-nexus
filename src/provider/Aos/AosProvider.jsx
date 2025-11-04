@@ -7,14 +7,14 @@ import "aos/dist/aos.css";
 const AosProvider = ({ children }) => {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
+      duration: 10000,
       once: false,
       mirror: true,
     });
   }, []);
 
   useEffect(() => {
-    AOS.refresh(); // refresh animations on route change
+    AOS.refresh();
   }, []);
 
   const refreshAos = () => {

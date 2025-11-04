@@ -6,7 +6,7 @@ const HowItWorks = () => {
       <div className="max-w-6xl mx-auto text-center px-6">
         <h2
           data-aos="fade-up"
-     
+          data-aos-duration="1000"
           className="text-4xl font-bold mb-10 "
         >
           How Nexus Works
@@ -36,6 +36,7 @@ const HowItWorks = () => {
           ].map((item, i) => (
             <div
               data-aos="fade-up"
+              data-aos-duration="1000"
               key={i}
               className="bg-white text-gray-800 p-6 rounded-2xl border-1 border-gray-100"
             >
