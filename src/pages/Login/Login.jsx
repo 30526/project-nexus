@@ -1,14 +1,18 @@
-import React, { use, useState } from "react";
+import React, { use, useRef, useState } from "react";
 import loginPage from "../../assets/5187967.jpg";
 import { Link, useLocation, useNavigate } from "react-router";
 import AuthContext from "../../provider/AuthContext";
 import toast from "react-hot-toast";
 import GoogleBtn from "../../components/GoogleBtn/GoogleBtn";
 import { FaEye } from "react-icons/fa";
+import { sendPasswordResetEmail } from "firebase/auth";
+import { auth } from "../../firebase/firebase.config";
 
 const Login = () => {
   const { signInUser } = use(AuthContext);
   const [showPassword, setShowPassword] = useState(false);
+  const emailRef = useRef(null);
+
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -18,9 +22,7 @@ const Login = () => {
     const password = event.target.password.value;
 
     signInUser(email, password)
-      .then((result) => {
-        const user = result.user;
-
+      .then(() => {
         toast.success("Logged in Successfully!");
         navigate(location.state);
       })
@@ -32,6 +34,14 @@ const Login = () => {
   const handleShowPassword = (e) => {
     e.preventDefault();
     setShowPassword(!showPassword);
+  };
+
+  const handleForgotPassword = () => {
+    const email = emailRef.current.value;
+   
+    sendPasswordResetEmail(auth, email)
+      .then(() => toast.success("Check Your Email"))
+      .catch((error) => toast.error(error.message));
   };
 
   return (
@@ -77,6 +87,7 @@ const Login = () => {
                     </g>
                   </svg>
                   <input
+                    ref={emailRef}
                     name="email"
                     type="email"
                     placeholder="mail@site.com"
@@ -136,6 +147,13 @@ const Login = () => {
                   At least one lowercase letter <br />
                   At least one uppercase letter
                 </p>
+                <button
+                  onClick={handleForgotPassword}
+                  type="button"
+                  className="text-left mt-1 cursor-pointer"
+                >
+                  Forgot Password?
+                </button>
                 <button
                   type="submit"
                   className="btn btn-neutral mt-4 mb-1 shadow-none"
