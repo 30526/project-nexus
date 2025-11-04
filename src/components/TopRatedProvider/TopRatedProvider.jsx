@@ -23,11 +23,13 @@ const TopRatedProvider = () => {
             <TopRatedCard topCourse={topCourse}></TopRatedCard>
           ))}
         </div>
-        <Link to={"/topRatedCourses"} className="mx-auto flex justify-center">
-          <button className="border border-blue-600/80 py-2 px-6 bg-white rounded-lg font-semibold text-blue-600/80 text-xs cursor-pointer my-10">
-            Show All
-          </button>
-        </Link>
+        <div className="flex justify-center my-10">
+          <Link to={"/topRatedCourses"}>
+            <button className="border border-blue-600/80 py-2 px-6 bg-white rounded-lg font-semibold text-blue-600/80 text-xs cursor-pointer">
+              Show All
+            </button>
+          </Link>
+        </div>
       </Container>
     </div>
   );
