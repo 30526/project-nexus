@@ -4,15 +4,12 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-
 const AosProvider = ({ children }) => {
-
-
   useEffect(() => {
     AOS.init({
-     
-      once: false, // animate every time it's visible
-      mirror: true, // animate when scrolling up
+      duration: 1000,
+      once: false,
+      mirror: true,
     });
   }, []);
 

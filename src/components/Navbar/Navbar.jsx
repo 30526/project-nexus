@@ -7,7 +7,7 @@ import LoginBtnToggle from "../LoginBtnToggle/LoginBtnToggle";
 
 const Navbar = () => {
   return (
-    <nav className="navbar bg-base-100 shadow-sm">
+    <nav className="navbar bg-base-100 shadow-sm sticky">
       <Container>
         <div className="flex justify-between">
           <div className="navbar-start">
