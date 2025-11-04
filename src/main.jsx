@@ -9,12 +9,15 @@ import "animate.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import AosProvider from "./provider/Aos/AosProvider";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Toaster />
     <AuthProvider>
-      <RouterProvider router={router}></RouterProvider>
+      <AosProvider>
+        <RouterProvider router={router}></RouterProvider>
+      </AosProvider>
     </AuthProvider>
   </StrictMode>
 );
