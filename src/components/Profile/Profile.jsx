@@ -7,7 +7,7 @@ import AuthContext from "../../provider/AuthContext";
 
 const Profile = () => {
   const { user } = use(AuthContext);
-  
+
   if (!user) {
     return (
       <div className="text-center p-10 text-gray-500 min-h-screen">
@@ -37,7 +37,7 @@ const Profile = () => {
         <div className="p-6 space-y-4">
           <div className="flex items-center gap-3">
             <FaUser className="text-blue-600" />
-            <span>Username: {user.username || "N/A"}</span>
+            <span>Username: {user.displayName || "N/A"}</span>
           </div>
 
           <div className="flex items-center gap-3">
