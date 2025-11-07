@@ -19,8 +19,8 @@ const TopRatedProvider = () => {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-4">
-          {sortedData.map((topCourse) => (
-            <TopRatedCard topCourse={topCourse}></TopRatedCard>
+          {sortedData.map((topCourse, i) => (
+            <TopRatedCard key={i} topCourse={topCourse}></TopRatedCard>
           ))}
         </div>
         <div className="flex justify-center my-10">
