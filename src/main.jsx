@@ -14,10 +14,10 @@ import AosProvider from "./provider/Aos/AosProvider";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <Toaster />
-    <AuthProvider>
-      <AosProvider>
+    <AosProvider>
+      <AuthProvider>
         <RouterProvider router={router}></RouterProvider>
-      </AosProvider>
-    </AuthProvider>
+      </AuthProvider>
+    </AosProvider>
   </StrictMode>
 );
