@@ -35,20 +35,23 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
               >
-                <MyLinks to={"/"}>
-                  <li>Home</li>
-                </MyLinks>
-                <MyLinks to={"myProfile"}>
-                  <li>My Profile</li>
-                </MyLinks>
+                <li>
+                  <MyLinks to={"/"}>Home </MyLinks>
+                </li>
+
+                <li>
+                  <MyLinks to={"myProfile"}>My Profile </MyLinks>
+                </li>
               </ul>
             </div>
             <div className="flex items-center gap-2">
               <img className="w-8" src={logo} alt="" />
               <NavLink to={"/"}>
-                <span className="text-2xl font-bold hidden md:block">Nexus</span>
+                <span className="text-2xl font-bold hidden md:block">
+                  Nexus
+                </span>
               </NavLink>
             </div>
           </div>
@@ -59,7 +62,6 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end">
-          
             <LoginBtnToggle></LoginBtnToggle>
           </div>
         </div>
