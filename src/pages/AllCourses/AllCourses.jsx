@@ -5,7 +5,7 @@ import Container from "../../components/Container/Container";
 import LoadingPage from "../LoadingPage/LoadingPage";
 
 const AllCourses = () => {
-  const [courseData, error, loading] = useCourseData();
+  const [courseData, loading] = useCourseData();
   if (loading) {
     return <LoadingPage></LoadingPage>;
   }
@@ -17,7 +17,7 @@ const AllCourses = () => {
           All Available Courses
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-4 justify-items-center gap-4 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-4 justify-items-center gap-4 mb-10 p-4 md:p-0">
         {courseData.map((data) => (
           <CourseCard key={data.skillId} data={data}></CourseCard>
         ))}

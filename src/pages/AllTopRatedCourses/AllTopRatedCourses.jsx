@@ -11,7 +11,7 @@ const AllTopRatedCourses = () => {
   return (
     <div>
       <Container>
-        <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-4 my-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 justify-items-center gap-4 my-20 p-4 md:p-0">
           {sortedData.map((topCourse) => (
             <TopRatedCard
               key={topCourse.skillId}
