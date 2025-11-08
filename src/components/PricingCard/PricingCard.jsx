@@ -3,21 +3,19 @@ import { GiCheckMark } from "react-icons/gi";
 
 const PricingCard = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center gap-4 pb-30 py-10 bg-blue-50">
+    <div className="flex flex-col md:flex-row justify-center items-center gap-4 pb-30 py-10 bg-blue-50 px-4">
       <div className="w-sm pb-15 bg-white h-fit translate-y-8 mb-15">
         <div className="py-6">
           <h2 className="text-2xl font-bold my-5 text-center">
-           Single learning program
+            Single learning program
           </h2>
           <p className="text-center mb-15">
-           Learn a single topic or skill and earn a credential
+            Learn a single topic or skill and earn a credential
           </p>
           <p className="text-4xl font-semibold text-center">
             $16-20/<span className="text-[22px]">month</span>
           </p>
-          <div className="flex justify-center">
-        
-          </div>
+          <div className="flex justify-center"></div>
           <p className="font-semibold text-xl text-center">Cancel Anytime</p>
         </div>
         <div className="border border-gray-200 mt-20 mb-10"></div>
@@ -31,7 +29,7 @@ const PricingCard = () => {
             Access 10,000+ courses and Specializations from 170+ leading
             companies and universities
           </p>
-          
+
           <div className="border border-gray-200"></div>
           <p className="flex gap-4">
             {" "}
@@ -144,14 +142,14 @@ const PricingCard = () => {
             Nexus Plus Annual
           </h2>
           <p className="text-center mb-15">
-           Combine flexibility and savings with long-term learning goals
+            Combine flexibility and savings <br /> with long-term learning goals
           </p>
           <p className="text-4xl font-semibold text-center">
             $120/<span className="text-[22px]">year</span>
           </p>
           <div className="flex justify-center">
             <button className="my-6 py-4 rounded-xl cursor-pointer font-medium border-1 text-blue-600 border-blue-600 text-blue px-12">
-             Try Course Plan Annual
+              Try Course Plan Annual
             </button>
           </div>
           <p className="font-semibold text-xl text-center">Cancel Anytime</p>
@@ -177,7 +175,6 @@ const PricingCard = () => {
             Access 10,000+ courses and Specializations from 170+ leading
             companies and universities
           </p>
-         
         </div>
       </div>
     </div>
