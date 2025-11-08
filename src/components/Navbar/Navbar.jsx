@@ -7,7 +7,7 @@ import LoginBtnToggle from "../LoginBtnToggle/LoginBtnToggle";
 
 const Navbar = () => {
   return (
-    <nav className="navbar bg-base-100 shadow-sm sticky">
+    <nav className="navbar bg-base-100 shadow-sm top-0 z-50">
       <Container>
         <div className="flex justify-between">
           <div className="navbar-start">
@@ -46,14 +46,14 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex items-center gap-2">
-              <img className="w-8" src={logo} alt="" />
-              <NavLink to={"/"}>
+            <NavLink to={"/"}>
+              <div className="flex items-center gap-2">
+                <img className="w-8" src={logo} alt="" />
                 <span className="text-2xl font-bold hidden md:block">
                   Nexus
                 </span>
-              </NavLink>
-            </div>
+              </div>
+            </NavLink>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="gap-4 menu menu-horizontal px-1">

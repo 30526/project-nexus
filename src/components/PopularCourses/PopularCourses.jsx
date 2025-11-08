@@ -12,7 +12,7 @@ const PopularCourses = () => {
   return (
     <Container>
       <div className="grid md:grid-cols-12 grid-cols-1 gap-4 my-30">
-        <div className="md:col-span-4">
+        <div className="md:col-span-4 p-4 md:p-0">
           <h2
             className=" text-4xl font-bold mb-18 bg-linear-to-br from-[#1770ff] to-[#07c2f1fa] text-transparent bg-clip-text
           text-center md:text-left"
