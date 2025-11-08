@@ -35,15 +35,11 @@ const Navbar = () => {
               </div>
               <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
+                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow gap-1"
               >
-                <li>
-                  <MyLinks to={"/"}>Home </MyLinks>
-                </li>
-
-                <li>
-                  <MyLinks to={"myProfile"}>My Profile </MyLinks>
-                </li>
+                <MyLinks to={"/"}>Home</MyLinks>
+                <MyLinks to={"/allCourses"}>Courses</MyLinks>
+                <MyLinks to={"/myProfile"}>Profile</MyLinks>
               </ul>
             </div>
             <NavLink to={"/"}>
@@ -58,7 +54,8 @@ const Navbar = () => {
           <div className="navbar-center hidden lg:flex">
             <ul className="gap-4 menu menu-horizontal px-1">
               <MyLinks to={"/"}>Home</MyLinks>
-              <MyLinks to={"myProfile"}>My Profile</MyLinks>
+              <MyLinks to={"/allCourses"}>Courses</MyLinks>
+              <MyLinks to={"/myProfile"}>Profile</MyLinks>
             </ul>
           </div>
           <div className="navbar-end">
