@@ -34,7 +34,7 @@ const PopularCourses = () => {
           </Link>
         </div>
         <div className="md:col-span-8">
-          <div className=" grid grid-cols-1 md:grid-cols-3 justify-items-center gap-4 ">
+          <div className=" grid grid-cols-1 md:grid-cols-3 justify-items-center gap-4 p-4 md:p-0">
             {slicedCourseData.map((data) => (
               <CourseCard key={data.skillId} data={data}></CourseCard>
             ))}

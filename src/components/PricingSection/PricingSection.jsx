@@ -9,7 +9,9 @@ const PricingSection = () => {
           Select Your Plan
         </h2>
       </div>
-      <PricingCard></PricingCard>
+      <div className="p-4 md:p-0">
+        <PricingCard></PricingCard>
+      </div>
     </div>
   );
 };
