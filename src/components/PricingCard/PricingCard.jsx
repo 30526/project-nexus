@@ -3,7 +3,7 @@ import { GiCheckMark } from "react-icons/gi";
 
 const PricingCard = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center items-center gap-4 pb-30 py-10 bg-blue-50 px-4">
+    <div className="flex flex-col md:flex-row justify-center items-center gap-4 pb-30 py-10 px-4">
       <div className="w-sm pb-15 bg-white h-fit translate-y-8 mb-15">
         <div className="py-6">
           <h2 className="text-2xl font-bold my-5 text-center">
